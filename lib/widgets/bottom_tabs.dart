@@ -46,7 +46,7 @@ class BottomTabBtn extends StatelessWidget {
 class HomeNavigateTabs extends StatelessWidget {
   final String text;
   final IconData iconData;
-  final Function onPressed;
+  final Function() onPressed;
 
   const HomeNavigateTabs(
       {Key? key,
@@ -58,7 +58,7 @@ class HomeNavigateTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed(),
+      onTap: onPressed,
       child: Container(
         child: Row(
           children: [
@@ -129,14 +129,14 @@ class HomeNavigateTabs extends StatelessWidget {
 }
 
 class CartBottomTabBtn extends StatelessWidget {
-  final Function onPressed;
+  final Function() onPressed;
 
   const CartBottomTabBtn({Key? key, required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed(),
+      onTap: onPressed,
       child: Container(
         height: 60.0,
         width: 150.0,

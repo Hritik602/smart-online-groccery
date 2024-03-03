@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 //CUSTOM BUTTONS TO LOGIN AND REGISTER PAGES / WHITE - GREEN
 class CustomBtn extends StatelessWidget {
   final String text;
-  final Function onPressed;
+  final Function() onPressed;
   final bool outlineBtn;
   final bool isLoading;
 
@@ -22,7 +22,7 @@ class CustomBtn extends StatelessWidget {
     bool _isLoading = isLoading ?? false;
 
     return GestureDetector(
-      onTap: onPressed(),
+      onTap: onPressed,
       child: Container(
         height: 60.0,
         alignment: Alignment.center,
