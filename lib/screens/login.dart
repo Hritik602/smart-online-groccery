@@ -148,10 +148,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: CustomBtn(
                   text: "Create New Account",
                   onPressed: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => RegisterPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RegisterPage()));
                   },
                   outlineBtn: true, isLoading: _loginFromLoading,
                 ),
