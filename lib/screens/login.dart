@@ -99,8 +99,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          width: double.infinity,
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -145,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       _submitForm();
                     },
-                    isLoading: _loginFromLoading,
+                    isLoading: _loginFromLoading, outlineBtn: false,
                   ),
                 ],
               ),
@@ -161,7 +160,7 @@ class _LoginPageState extends State<LoginPage> {
                         MaterialPageRoute(
                             builder: (context) => RegisterPage()));
                   },
-                  outlineBtn: true,
+                  outlineBtn: true, isLoading: true,
                 ),
               ),
             ],

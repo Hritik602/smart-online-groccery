@@ -84,7 +84,8 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
           child: ListTile(
             title: Text(item.title),
             //leading: Checkbox(value: item.complete, onChanged: (value){item.complete = value;}),
-            leading: CustomCheckbox(),
+          //  leading:
+            //CustomCheckbox(size: null,),
             //onTap: () => setComplete(item),
             onLongPress: () => goToEditItemView(item),
           ),

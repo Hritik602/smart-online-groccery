@@ -148,6 +148,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       _submitForm();
                     },
                     isLoading: _registerFromLoading,
+                    outlineBtn: true,
                   ),
                 ],
               ),
@@ -161,7 +162,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoginPage()));
                   },
-                  outlineBtn: true,
+
+                  outlineBtn: true, isLoading: false,
                 ),
               ),
             ],
