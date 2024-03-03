@@ -30,22 +30,30 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
     await FlutterBarcodeScanner.scanBarcode(
             '#1faa00', "Cancel", true, ScanMode.BARCODE)
         .then((value) {
-      print(value);
+      debugPrint("Value");
       _firebaseServices.productsRef
           .where('barcode', isEqualTo: value)
           .get()
           .then((val) {
-        itemsList.add(new Item(
-          barcode: val.docs.first['barcode'],
-          name: val.docs.first['name'],
-          price: double.parse(val.docs.first['price'].toString()),
-          weight: double.parse(val.docs.first['weight'].toString()),
-          quantity: 1,
-          photo: val.docs.first['image'],
-        ));
-        ScaffoldMessenger.of(context).showSnackBar(_snackBarItemAdded);
-        getTotals();
+
+
+        if (val.docs.isNotEmpty) {
+          itemsList.add( Item(
+            barcode: val.docs.first['barcode'],
+            name: val.docs.first['name'],
+            price: double.parse(val.docs.first['price'].toString()),
+            weight: double.parse(val.docs.first['weight'].toString()),
+            quantity: 1,
+            photo: val.docs.first['image'],
+          ));
+          ScaffoldMessenger.of(context).showSnackBar(_snackBarItemAdded);
+          getTotals();
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text("Item not found")));
+        }
       });
+
     });
   }
 
