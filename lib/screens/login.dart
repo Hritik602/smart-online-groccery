@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:onlinegrocerystore/screens/register.dart';
 import 'package:onlinegrocerystore/widgets/custom_button.dart';
 import 'package:onlinegrocerystore/widgets/custom_input.dart';
 
