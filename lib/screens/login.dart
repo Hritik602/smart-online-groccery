@@ -3,8 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:onlinegrocerystore/widgets/custom_button.dart';
 import 'package:onlinegrocerystore/widgets/custom_input.dart';
-import 'package:onlinegrocerystore/constants.dart';
-import 'package:onlinegrocerystore/screens/register.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -99,55 +98,49 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.only(
-                  top: 24.0,
-                ),
+
                 child: Text(
                   "Welcome Shopper!\nLogin to your account",
                   textAlign: TextAlign.center,
-                  style: Constants.boldHeading,
+
                 ),
               ),
-              Column(
-                children: [
-                  CustomInput(
-                    hintText: "Email...",
-                    textCapitalization: TextCapitalization.none,
-                    textInputType: TextInputType.emailAddress,
-                    onChanged: (value) {
-                      _loginEmail = value;
-                    },
-                    onSubmitted: (value) {
-                      _inputFocusNodePassword.requestFocus();
-                    },
-                    textInputAction: TextInputAction.next,
-                  ),
-                  CustomInput(
-                    hintText: "Password...",
-                    textCapitalization: TextCapitalization.none,
-                    onChanged: (value) {
-                      _loginPassword = value;
-                    },
-                    onSubmitted: (value) {
-                      _submitForm();
-                    },
-                    focusNode: _inputFocusNodePassword,
-                    isPasswordField: true,
-                  ),
-                  CustomBtn(
-                    text: "Login",
-                    onPressed: () {
-                      _submitForm();
-                    },
-                    isLoading: _loginFromLoading, outlineBtn: false,
-                  ),
-                ],
+              CustomInput(
+                hintText: "Email...",
+                textCapitalization: TextCapitalization.none,
+                textInputType: TextInputType.emailAddress,
+                onChanged: (value) {
+                  _loginEmail = value;
+                },
+                onSubmitted: (value) {
+                  _inputFocusNodePassword.requestFocus();
+                },
+                textInputAction: TextInputAction.next,
               ),
+              CustomInput(
+                hintText: "Password...",
+                textCapitalization: TextCapitalization.none,
+                onChanged: (value) {
+                  _loginPassword = value;
+                },
+                onSubmitted: (value) {
+                  _submitForm();
+                },
+                focusNode: _inputFocusNodePassword,
+                isPasswordField: true,
+              ),
+              CustomBtn(
+                text: "Login",
+                onPressed: () {
+                  _submitForm();
+                },
+                isLoading: _loginFromLoading, outlineBtn: false,
+              ),
+
               Padding(
                 padding: const EdgeInsets.only(
                   bottom: 24.0,
@@ -155,17 +148,16 @@ class _LoginPageState extends State<LoginPage> {
                 child: CustomBtn(
                   text: "Create New Account",
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => RegisterPage()));
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => RegisterPage()));
                   },
-                  outlineBtn: true, isLoading: true,
+                  outlineBtn: true, isLoading: _loginFromLoading,
                 ),
               ),
             ],
           ),
-        ),
       ),
     );
   }
