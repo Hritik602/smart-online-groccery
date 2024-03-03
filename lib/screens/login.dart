@@ -104,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               Container(
 
-                child: Text(
+                child: const Text(
                   "Welcome Shopper!\nLogin to your account",
                   textAlign: TextAlign.center,
 
@@ -129,7 +129,7 @@ class _LoginPageState extends State<LoginPage> {
                   _loginPassword = value;
                 },
                 onSubmitted: (value) {
-                  _submitForm();
+                 // _submitForm();
                 },
                 focusNode: _inputFocusNodePassword,
                 isPasswordField: true,
@@ -137,6 +137,7 @@ class _LoginPageState extends State<LoginPage> {
               CustomBtn(
                 text: "Login",
                 onPressed: () {
+                  debugPrint("Clicked");
                   _submitForm();
                 },
                 isLoading: _loginFromLoading, outlineBtn: false,

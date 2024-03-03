@@ -27,18 +27,18 @@ class _HomePageState extends State<HomePage> {
           ),
           textTheme: GoogleFonts.poppinsTextTheme(),
           toolbarHeight: 200.0,
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20)),
-                image: DecorationImage(
-                    image: AssetImage("assets/image2.png"), fit: BoxFit.cover)),
-          ),
+          // flexibleSpace: Container(
+          //   decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.only(
+          //           bottomLeft: Radius.circular(20),
+          //           bottomRight: Radius.circular(20)),
+          //       image: DecorationImage(
+          //           image: AssetImage("assets/image2.png"), fit: BoxFit.cover)),
+          // ),
         ),
         drawer: AppDrawer(),
         body: SafeArea(
-          child: Container(
+          child: SizedBox(
             width: double.infinity,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
