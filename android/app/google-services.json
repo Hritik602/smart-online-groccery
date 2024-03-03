@@ -1,0 +1,190 @@
+{
+  "project_info": {
+    "project_number": "826233383575",
+    "project_id": "dear-chat-d17c8",
+    "storage_bucket": "dear-chat-d17c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826233383575:android:32f9cb4573d4ab5c5097d2",
+        "android_client_info": {
+          "package_name": "com.example.dear_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTott5kthERJmRTYTrlsbA0JAmlxMKe_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826233383575-3raqi7q29kd5f2sg62hv24sfcdb55r95.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newQrApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826233383575:android:4e540b18a17c6b065097d2",
+        "android_client_info": {
+          "package_name": "com.example.new_qr_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTott5kthERJmRTYTrlsbA0JAmlxMKe_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826233383575-3raqi7q29kd5f2sg62hv24sfcdb55r95.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newQrApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826233383575:android:2cd8eb189a3771c15097d2",
+        "android_client_info": {
+          "package_name": "com.example.onlinegrocerystore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTott5kthERJmRTYTrlsbA0JAmlxMKe_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826233383575-3raqi7q29kd5f2sg62hv24sfcdb55r95.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newQrApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826233383575:android:c616d24e5aa7bf565097d2",
+        "android_client_info": {
+          "package_name": "com.example.room_management_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTott5kthERJmRTYTrlsbA0JAmlxMKe_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826233383575-3raqi7q29kd5f2sg62hv24sfcdb55r95.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newQrApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826233383575:android:472095da1b46441f5097d2",
+        "android_client_info": {
+          "package_name": "com.sunali.selfcheckoutapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTott5kthERJmRTYTrlsbA0JAmlxMKe_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826233383575-c2u4cuvq2o8ktkfs4adv47h09n1kmhgs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826233383575-3raqi7q29kd5f2sg62hv24sfcdb55r95.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newQrApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
