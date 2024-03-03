@@ -3,19 +3,19 @@ import 'package:onlinegrocerystore/constants.dart';
 
 //TEXT FIELD INPUT BOX
 class CustomInput extends StatelessWidget {
-  final String hintText;
-  final Function(String) onChanged;
-  final Function(String) onSubmitted;
-  final FocusNode focusNode;
-  final TextInputAction textInputAction;
-  final bool isPasswordField;
-  final TextCapitalization textCapitalization;
-  final TextInputType textInputType;
+  final String? hintText;
+  final Function(String)? onChanged;
+  final Function(String)? onSubmitted;
+  final FocusNode? focusNode;
+  final TextInputAction? textInputAction;
+  final bool? isPasswordField;
+  final TextCapitalization? textCapitalization;
+  final TextInputType? textInputType;
   final dynamic controller;
 
   const CustomInput(
       {Key? key,
-      this.hintText,
+      this.hintText="",
       this.onChanged,
       this.onSubmitted,
       this.focusNode,
@@ -47,7 +47,7 @@ class CustomInput extends StatelessWidget {
           onSubmitted: onSubmitted,
           textInputAction: textInputAction,
           keyboardType: textInputType,
-          textCapitalization: textCapitalization,
+          textCapitalization: textCapitalization??TextCapitalization.characters,
           decoration: InputDecoration(
               border: InputBorder.none,
               hintText: hintText ?? "Hint Text...",
