@@ -154,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                         MaterialPageRoute(
                             builder: (context) => RegisterPage()));
                   },
-                  outlineBtn: true, isLoading: _loginFromLoading,
+                  outlineBtn: true, isLoading: false,
                 ),
               ),
             ],
