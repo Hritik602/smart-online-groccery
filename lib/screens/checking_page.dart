@@ -26,13 +26,13 @@ class _CheckingPageState extends State<CheckingPage> {
       double qrWeight = double.parse(value);
       if (((widget.totalWeight - 0.05) < qrWeight) &&
           ((widget.totalWeight + 0.05) > qrWeight)) {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //       builder: (context) => PaymentPage(
-        //             total: widget.total,
-        //           )),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => PaymentPage(
+                    total: widget.total,
+                  )),
+        );
       } else
         _showConfirmationMessage();
     });
@@ -66,7 +66,7 @@ class _CheckingPageState extends State<CheckingPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async => false,
+      onWillPop: () async => true,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -106,7 +106,14 @@ class _CheckingPageState extends State<CheckingPage> {
                   style: TextStyle(fontSize: 18.0),
                 ),
                 onPressed: () {
-                  _compareWithCurrentWeight();
+                  //_compareWithCurrentWeight();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PaymentPage(
+                          total: widget.total,
+                        )),
+                  );
                 },
               ),
             ),
