@@ -12,6 +12,8 @@ class CustomInput extends StatelessWidget {
   final TextCapitalization? textCapitalization;
   final TextInputType? textInputType;
   final dynamic controller;
+  final String Function(String? value)? validation;
+  final Widget? suffix;
 
   const CustomInput(
       {Key? key,
@@ -23,6 +25,8 @@ class CustomInput extends StatelessWidget {
       this.isPasswordField,
       this.controller,
       this.textCapitalization,
+        this.validation,
+        this.suffix,
       this.textInputType})
       : super(key: key);
 
@@ -39,16 +43,25 @@ class CustomInput extends StatelessWidget {
           color: Color(0xfff2f2f2),
           borderRadius: BorderRadius.circular(12.0),
         ),
-        child: TextField(
+        child: TextFormField(
+
           controller: controller,
           obscureText: _isPasswordField,
+          validator: validation??(v){
+            if(v!.isEmpty){
+              return "Please fill details";
+        }
+            return null;
+          },
           focusNode: focusNode,
           onChanged: onChanged,
-          onSubmitted: onSubmitted,
+          onFieldSubmitted: onSubmitted,
           textInputAction: textInputAction,
           keyboardType: textInputType,
           textCapitalization: textCapitalization??TextCapitalization.characters,
           decoration: InputDecoration(
+
+            suffixIcon: suffix??SizedBox(),
               border: InputBorder.none,
               hintText: hintText ?? "Hint Text...",
               contentPadding:
