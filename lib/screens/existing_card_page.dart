@@ -6,12 +6,12 @@ import 'package:onlinegrocerystore/constants.dart';
 import 'package:onlinegrocerystore/screens/home.dart';
 import 'package:onlinegrocerystore/services/payment_services.dart';
 // import 'package:stripe_payment/stripe_payment.dart';
-import 'package:progress_dialog/progress_dialog.dart';
+
 
 class ExistingCardPage extends StatefulWidget {
   final double total;
 
-  const ExistingCardPage({required Key key, required this.total})
+  const ExistingCardPage({ Key? key, required this.total})
       : super(key: key);
 
   @override
@@ -39,9 +39,9 @@ class _ExistingCardPageState extends State<ExistingCardPage> {
 
   //FUNCTION TO PAY
   payViaExistingCard(BuildContext context, card) async {
-    ProgressDialog dialog = new ProgressDialog(context);
-    dialog.style(message: 'Please wait...');
-    await dialog.show();
+    // ProgressDialog dialog = new ProgressDialog(context);
+    // dialog.style(message: 'Please wait...');
+    // await dialog.show();
     var expiryArr = card['expiryDate'].split('/');
     // CreditCard stripeCard = CreditCard(
     //   number: card['cardNumber'],

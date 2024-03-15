@@ -27,14 +27,15 @@ class _HomePageState extends State<HomePage> {
           ),
           textTheme: GoogleFonts.poppinsTextTheme(),
           toolbarHeight: 200.0,
-          // flexibleSpace: Container(
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.only(
-          //           bottomLeft: Radius.circular(20),
-          //           bottomRight: Radius.circular(20)),
-          //       image: DecorationImage(
-          //           image: AssetImage("assets/image2.png"), fit: BoxFit.cover)),
-          // ),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+                image: DecorationImage(
+                  colorFilter:ColorFilter.mode(Colors.grey, BlendMode.darken) ,
+                    image: AssetImage("assets/assets/smart_grocery_image.jpeg"), fit: BoxFit.cover)),
+          ),
         ),
         drawer: AppDrawer(),
         body: SafeArea(
