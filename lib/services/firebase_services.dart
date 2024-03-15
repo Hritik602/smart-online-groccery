@@ -30,6 +30,25 @@ class FirebaseServices {
   final CollectionReference userDetailsRef =
       FirebaseFirestore.instance.collection("UserDetails");
 
+ static Future<void> addUserToFirestore(String name, String email, String uid ) async {
+    try {
+      // Get a reference to the Firestore collection
+      final DocumentReference userRef = FirebaseFirestore.instance.collection('users').doc(uid);
+
+      // Add user data to Firestore
+      await userRef.set({
+        'id':uid,
+        'name': name,
+        'email': email,
+        // Add any additional fields as needed
+      });
+
+      print('User added to Firestore successfully.');
+    } catch (error) {
+      print('Error adding user to Firestore: $error');
+    }
+  }
+
   Future<void> userSetup(String displayName) async {
     CollectionReference users = _firebaseFirestore.collection('UserDetails');
 

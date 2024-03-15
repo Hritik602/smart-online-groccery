@@ -26,7 +26,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -50,20 +53,10 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDTott5kthERJmRTYTrlsbA0JAmlxMKe_c',
-    appId: '1:826233383575:android:2cd8eb189a3771c15097d2',
-    messagingSenderId: '826233383575',
-    projectId: 'dear-chat-d17c8',
-    storageBucket: 'dear-chat-d17c8.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBslohY4Lv9FxYNJwMRDZtD_R_eXN7etjk',
-    appId: '1:826233383575:ios:93e3a77376e4570e5097d2',
-    messagingSenderId: '826233383575',
-    projectId: 'dear-chat-d17c8',
-    storageBucket: 'dear-chat-d17c8.appspot.com',
-    iosClientId: '826233383575-gcts1jg0gh97jnmr05m954tt7eiea6er.apps.googleusercontent.com',
-    iosBundleId: 'com.example.onlinegrocerystore',
+    apiKey: 'AIzaSyD3ZWKnMpc9j1cLpIL3gXEF9vkBe5Oqwc0',
+    appId: '1:272796203464:android:83a7da8f397b2c451168fd',
+    messagingSenderId: '272796203464',
+    projectId: 'smart-grocerry-system',
+    storageBucket: 'smart-grocerry-system.appspot.com',
   );
 }
