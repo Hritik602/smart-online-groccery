@@ -36,7 +36,7 @@ class _AppDrawerState extends State<AppDrawer> {
                           decoration: BoxDecoration(
                             color: Color(0xffD50000),
                             image: DecorationImage(
-                                image: AssetImage("assets/image2-dark.png"),
+                                image: AssetImage("assets/assets/smart_grocery_image.jpeg"),
                                 fit: BoxFit.cover),
                           ),
                           accountName: Text(
@@ -51,9 +51,10 @@ class _AppDrawerState extends State<AppDrawer> {
                       } else {
                         return UserAccountsDrawerHeader(
                           decoration: BoxDecoration(
-                            color: Color(0xffD50000),
+
                             image: DecorationImage(
-                                image: AssetImage("assets/image2-dark.png"),
+                              colorFilter: ColorFilter.mode(Colors.grey,BlendMode.darken),
+                                image: AssetImage("assets/assets/smart_grocery_image.jpeg"),
                                 fit: BoxFit.cover),
                           ),
                           accountName: StreamBuilder<Object>(
